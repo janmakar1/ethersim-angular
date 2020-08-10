@@ -1,0 +1,14 @@
+.container {
+  margin-top: 1em;
+}
+
+mat-form-field {
+  display: block;
+  /* width: fit-content; */
+  width: 300px;
+}
+
+mat-card {
+  height: 90%;
+  width: 90%;
+}

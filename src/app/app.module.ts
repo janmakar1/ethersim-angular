@@ -6,6 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'; 
+import { MatGridListModule } from '@angular/material/grid-list'; 
+import { MatCardModule } from '@angular/material/card'; 
+import { MatSelectModule } from '@angular/material/select'; 
+
 import { SettingsViewComponent } from './settings-view/settings-view.component';
 import { InputViewComponent } from './input-view/input-view.component';
 import { OutputViewComponent } from './output-view/output-view.component';
@@ -17,13 +24,20 @@ import { EyechartViewComponent } from './eyechart-view/eyechart-view.component';
     SettingsViewComponent,
     InputViewComponent,
     OutputViewComponent,
-    EyechartViewComponent
+    EyechartViewComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTabsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatCardModule,
 
   ],
   providers: [],
