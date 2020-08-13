@@ -1,48 +1,50 @@
 <div class="container">
+  <div>
+    <mat-card>
+      <mat-form-field appearance="standard">
+        <mat-label>standard Ethernet</mat-label>
+        <mat-select>
+          <mat-option value="10">10</mat-option>
+          <mat-option value="100">100</mat-option>
+          <mat-option value="1000">1000</mat-option>
+          <mat-option value="10G">10G</mat-option>
+          <mat-option value="100G">100G</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <mat-label>standard skrętki UTP</mat-label>
+        <mat-select>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">5</mat-option>
+          <mat-option value="5e">5e</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <mat-label>ciąg wejściowy</mat-label>
+        <mat-select>
+          <mat-option value="zera">same zera</mat-option>
+          <mat-option value="jedynki">same jedynki</mat-option>
+          <mat-option value="losowy">ciąg losowy</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input value="10" step="100" type="number" matInput placeholder="długość ciągu wejściowego w bitach">
+      </mat-form-field>
 
-  <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>
-      <mat-card>
+      <button mat-raised-button color="primary">Submit</button>
 
-        <mat-form-field appearance="standard">
-          <mat-label>standard Ethernet</mat-label>
-          <mat-select>
-            <mat-option value="10">10</mat-option>
-            <mat-option value="100">100</mat-option>
-            <mat-option value="1000">1000</mat-option>
-            <mat-option value="10G">10G</mat-option>
-            <mat-option value="100G">100G</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="standard">
-          <mat-label>standard skrętki UTP</mat-label>
-          <mat-select>
-            <mat-option value="3">3</mat-option>
-            <mat-option value="4">5</mat-option>
-            <mat-option value="5e">5e</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="standard">
-          <mat-label>ciąg wejściowy</mat-label>
-          <mat-select>
-            <mat-option value="zera">same zera</mat-option>
-            <mat-option value="jedynki">same jedynki</mat-option>
-            <mat-option value="losowy">ciąg losowy</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-          <input value="10" step="100" type="number" matInput placeholder="długość ciągu wejściowego w bitach">
-        </mat-form-field>
-
-        <button mat-raised-button color="primary">Submit</button>
-
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>
-        Right card. <br> Here will be a preview chart. <br>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-
+    </mat-card>
+  </div>
+  <div>
+    <mat-card>
+      Right card. <br> Here will be a preview chart. <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <!-- Obcaecati eaque nemo perferendis adipisci similique quos excepturi atque,
+      asperiores reprehenderit perspiciatis. Perferendis sed, ea quis dolore aspernatur velit odio enim sit?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, aliquid?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quidem.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, quasi?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nostrum? -->
+    </mat-card>
+  </div>
 </div>

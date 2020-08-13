@@ -1,14 +1,18 @@
 .container {
-  margin-top: 1em;
+  padding: 0.5em 0.5em;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media (min-width: 680px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 mat-form-field {
   display: block;
-  /* width: fit-content; */
   width: 300px;
-}
-
-mat-card {
-  height: 90%;
-  width: 90%;
 }
