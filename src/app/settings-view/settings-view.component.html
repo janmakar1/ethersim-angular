@@ -4,27 +4,19 @@
       <mat-form-field appearance="standard">
         <mat-label>standard Ethernet</mat-label>
         <mat-select>
-          <mat-option value="10">10</mat-option>
-          <mat-option value="100">100</mat-option>
-          <mat-option value="1000">1000</mat-option>
-          <mat-option value="10G">10G</mat-option>
-          <mat-option value="100G">100G</mat-option>
+          <mat-option *ngFor="let option of standardEthernetOptions" [value]="option">{{option}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="standard">
         <mat-label>standard skrętki UTP</mat-label>
         <mat-select>
-          <mat-option value="3">3</mat-option>
-          <mat-option value="4">5</mat-option>
-          <mat-option value="5e">5e</mat-option>
+          <mat-option *ngFor="let option of standardUtpOptions" [value]="option">{{option}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="standard">
         <mat-label>ciąg wejściowy</mat-label>
         <mat-select>
-          <mat-option value="zera">same zera</mat-option>
-          <mat-option value="jedynki">same jedynki</mat-option>
-          <mat-option value="losowy">ciąg losowy</mat-option>
+          <mat-option *ngFor="let opt of generationMethods" [value]="opt.value">{{ opt.viewValue }}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
@@ -39,12 +31,6 @@
     <mat-card>
       Right card. <br> Here will be a preview chart. <br>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      <!-- Obcaecati eaque nemo perferendis adipisci similique quos excepturi atque,
-      asperiores reprehenderit perspiciatis. Perferendis sed, ea quis dolore aspernatur velit odio enim sit?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, aliquid?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quidem.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, quasi?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nostrum? -->
     </mat-card>
   </div>
 </div>
