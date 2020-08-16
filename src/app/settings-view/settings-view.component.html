@@ -3,24 +3,24 @@
     <mat-card>
       <mat-form-field appearance="standard">
         <mat-label>standard Ethernet</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectedEthernetStandard">
           <mat-option *ngFor="let option of standardEthernetOptions" [value]="option">{{option}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="standard">
         <mat-label>standard skrętki UTP</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectedUtpStandard">
           <mat-option *ngFor="let option of standardUtpOptions" [value]="option">{{option}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="standard">
         <mat-label>ciąg wejściowy</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectedGenerationMethod">
           <mat-option *ngFor="let opt of generationMethods" [value]="opt.value">{{ opt.viewValue }}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
-        <input value="10" step="100" type="number" matInput placeholder="długość ciągu wejściowego w bitach">
+        <input step="10" type="number" matInput placeholder="długość ciągu wejściowego w bitach" [(ngModel)]="length">
       </mat-form-field>
 
       <button mat-raised-button color="primary">Submit</button>
@@ -30,7 +30,12 @@
   <div>
     <mat-card>
       Right card. <br> Here will be a preview chart. <br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+      Długość ciągu w bitach: {{length}} <br>
+      Ethernet: {{selectedEthernetStandard}} <br>
+      UTP: {{selectedUtpStandard}} <br>
+      And the generation method {{selectedGenerationMethod}} <br>
+      
     </mat-card>
   </div>
 </div>
