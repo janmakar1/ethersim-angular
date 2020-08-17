@@ -12,12 +12,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'; 
 import { MatGridListModule } from '@angular/material/grid-list'; 
 import { MatCardModule } from '@angular/material/card'; 
-import { MatSelectModule } from '@angular/material/select'; 
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table'; 
 
 import { SettingsViewComponent } from './settings-view/settings-view.component';
 import { InputViewComponent } from './input-view/input-view.component';
 import { OutputViewComponent } from './output-view/output-view.component';
 import { EyechartViewComponent } from './eyechart-view/eyechart-view.component';
+import { CharacteristicsTableComponent } from './characteristics-table/characteristics-table.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { EyechartViewComponent } from './eyechart-view/eyechart-view.component';
     InputViewComponent,
     OutputViewComponent,
     EyechartViewComponent,
+    CharacteristicsTableComponent,
 
   ],
   imports: [
@@ -40,6 +43,7 @@ import { EyechartViewComponent } from './eyechart-view/eyechart-view.component';
     MatGridListModule,
     MatSelectModule,
     MatCardModule,
+    MatTableModule,
 
   ],
   providers: [],
