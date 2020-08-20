@@ -10,7 +10,7 @@
       <mat-form-field appearance="standard">
         <mat-label>standard skrętki UTP</mat-label>
         <mat-select [(ngModel)]="selectedUtpStandard">
-          <mat-option *ngFor="let option of standardUtpOptions" [value]="option">{{option}}</mat-option>
+          <mat-option *ngFor="let option of standardUtpOptions" [value]="option.value">{{option.viewValue}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="standard">
@@ -23,7 +23,9 @@
         <input step="10" type="number" matInput placeholder="długość ciągu wejściowego w bitach" [(ngModel)]="length">
       </mat-form-field>
 
-      <button mat-raised-button color="primary">Submit</button>
+      <app-characteristics-table [selectedUtpOption]="selectedUtpStandard"></app-characteristics-table>
+
+      <button (click)="submitForm()" id="submit" mat-raised-button color="primary">Submit</button>
 
     </mat-card>
   </div>

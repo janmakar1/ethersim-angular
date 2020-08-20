@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtpStandardType } from '../utp-standard-type.enum';
 
 interface TwoStrings {
   value: string,
@@ -15,7 +16,11 @@ export class SettingsViewComponent implements OnInit {
   constructor() { }
 
   standardEthernetOptions = ['10', '100', '1000', '10G', '100G'];
-  standardUtpOptions = ['3', '5', '5e'];
+  standardUtpOptions = [
+    { value: UtpStandardType.utp3, viewValue: '3', },
+    { value: UtpStandardType.utp5, viewValue: '5', },
+    { value: UtpStandardType.utp5e, viewValue: '5e', },
+  ];
   generationMethods: TwoStrings[] = [
     {value: 'zeros', viewValue: 'same zera'},
     {value: 'ones', viewValue: 'same jedynki'},
@@ -24,10 +29,14 @@ export class SettingsViewComponent implements OnInit {
 
   length: number = 10;
   selectedEthernetStandard: string;
-  selectedUtpStandard: string;
+  selectedUtpStandard: UtpStandardType;
   selectedGenerationMethod: TwoStrings;
 
   ngOnInit(): void {
+  }
+
+  submitForm() {
+    console.log("clicked!!")
   }
 
 }

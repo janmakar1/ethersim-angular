@@ -16,3 +16,8 @@ mat-form-field {
   display: block;
   width: 300px;
 }
+
+button#submit {
+  margin-top: 10px;
+  display: block;
+}
