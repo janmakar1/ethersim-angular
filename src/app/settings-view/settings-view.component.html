@@ -1,4 +1,5 @@
 <div class="container">
+  <!-- first column -->
   <div>
     <mat-card>
       <mat-form-field appearance="standard">
@@ -23,12 +24,21 @@
         <input step="10" type="number" matInput placeholder="długość ciągu wejściowego w bitach" [(ngModel)]="length">
       </mat-form-field>
 
-      <app-characteristics-table [selectedUtpOption]="selectedUtpStandard"></app-characteristics-table>
+      <!-- <app-characteristics-table [selectedUtpOption]="selectedUtpStandard"></app-characteristics-table> -->
 
       <button (click)="submitForm()" id="submit" mat-raised-button color="primary">Submit</button>
 
     </mat-card>
   </div>
+
+  <!-- second column -->
+  <div>
+    <mat-card>
+      <app-characteristics-table [selectedUtpOption]="selectedUtpStandard"></app-characteristics-table>
+    </mat-card>
+  </div>
+
+  <!-- third column but bigger one -->
   <div>
     <mat-card>
       Right card. <br> Here will be a preview chart. <br>
