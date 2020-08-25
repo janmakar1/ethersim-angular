@@ -15,15 +15,30 @@ export class PreviewChartComponent implements OnInit, OnChanges {
 
   constructor(private service: CharacteristicsDataService) { }
 
+  outerHeight: number = 500;
+  outerWidth: number = 500;
+
   @Input() selectedUtpOption: UtpStandardType = UtpStandardType.utp3; 
 
   ngOnInit(): void {
     let realDataAsNumbers = this.service.getAsNumberTuple(UtpStandardType.utp3, CharacteristicsType.tlumienie);
     
+    let xScale = d3.scaleLinear()
+      .domain([0, 20])
+      .range([0,500]);
+
+    let yScale = d3.scaleLinear()
+      .domain([0,20])
+      .range([0, 500]);
+
     let line = d3.line()
+      // .x(function(d) {return d[0]})
+      // .y(function(d) {return d[1]})
+      .x(function(d) {return xScale(d[0])})
+      .y(function(d) {return yScale(d[1])})
 
     let svg = d3.select('svg');
-    
+
     let path = svg
       .append("path")
       .attr("fill", "none")
