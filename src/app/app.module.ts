@@ -20,6 +20,7 @@ import { InputViewComponent } from './input-view/input-view.component';
 import { OutputViewComponent } from './output-view/output-view.component';
 import { EyechartViewComponent } from './eyechart-view/eyechart-view.component';
 import { CharacteristicsTableComponent } from './characteristics-table/characteristics-table.component';
+import { PreviewChartComponent } from './preview-chart/preview-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CharacteristicsTableComponent } from './characteristics-table/character
     OutputViewComponent,
     EyechartViewComponent,
     CharacteristicsTableComponent,
+    PreviewChartComponent,
 
   ],
   imports: [
