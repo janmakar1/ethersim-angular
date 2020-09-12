@@ -4,9 +4,14 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-tab-group color="primary">
-  <mat-tab label="settings"><app-settings-view></app-settings-view></mat-tab>
-  <mat-tab label="input"><app-input-view></app-input-view></mat-tab>
-  <mat-tab label="output"><app-output-view></app-output-view></mat-tab>
-  <mat-tab label="eyechart"><app-eyechart-view></app-eyechart-view></mat-tab>
-</mat-tab-group>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+  *ngFor="let link of navLinks"
+  [routerLink]="link.link"
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive">
+    {{ link.label }}  
+  </a>
+</nav>
+
+<router-outlet></router-outlet>

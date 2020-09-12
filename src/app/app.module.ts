@@ -21,6 +21,7 @@ import { OutputViewComponent } from './output-view/output-view.component';
 import { EyechartViewComponent } from './eyechart-view/eyechart-view.component';
 import { CharacteristicsTableComponent } from './characteristics-table/characteristics-table.component';
 import { PreviewChartComponent } from './preview-chart/preview-chart.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PreviewChartComponent } from './preview-chart/preview-chart.component';
     MatSelectModule,
     MatCardModule,
     MatTableModule,
+    AppRoutingModule,
 
   ],
   providers: [],
