@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "doc": "npx typedoc --out docs src --tsconfig tsconfig.base.json",
-    "tsnode": "ts-node scripts/set-env.ts"
+    "deploy": "dotenv -e .env ng deploy"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +39,7 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "dotenv": "^8.2.0",
+    "dotenv-cli": "^3.2.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
