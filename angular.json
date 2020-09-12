@@ -119,6 +119,12 @@
               "devServerTarget": "ethersim-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/ethersim-angular"
+          }
         }
       }
     }
