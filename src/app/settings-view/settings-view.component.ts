@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UtpStandardType } from '../utp-standard-type.enum';
+import { SettingsService } from '../settings.service';
 
 interface TwoStrings {
   value: string,
@@ -13,7 +14,7 @@ interface TwoStrings {
 })
 export class SettingsViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: SettingsService) {}
 
   standardEthernetOptions = ['10', '100', '1000', '10G', '100G'];
   standardUtpOptions = [
@@ -35,8 +36,11 @@ export class SettingsViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitForm() {
-    console.log("clicked!!")
+  submitForm(): void {
+    console.log("clicked!!");
+    this.service.setEthernetStandard(this.selectedEthernetStandard);
+    // this.service.setUtpStandard(this.selectedUtpStandard);
+    
   }
 
 }
