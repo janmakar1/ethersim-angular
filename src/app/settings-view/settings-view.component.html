@@ -24,15 +24,15 @@
         <input step="10" type="number" matInput placeholder="długość ciągu wejściowego w bitach" [(ngModel)]="length">
       </mat-form-field>
 
-      <!--
-      TODO: generowanie danych wejsciowych bedzie sie odbywac tutaj
-      jeszcze nie wiem czy po kliknieciu na submit czy po wybraniu odpowiednich rzeczy
-      
-      -->
-
       <!-- <app-characteristics-table [selectedUtpOption]="selectedUtpStandard"></app-characteristics-table> -->
 
       <button (click)="submitForm()" id="submit" mat-raised-button color="primary">Submit</button>
+      <!-- <p *ngIf="inputSequence.length != 0">Wygenerowany ciąg wejściowy: {{ inputSequence }}</p> -->
+      <!-- <textarea *ngIf="inputSequence.length != 0" [value]="'Wygenerowany ciąg wejściowy:' + inputSequenceAsString "></textarea> -->
+      <div *ngIf="inputSequence.length != 0">
+        <p>Wygenerowany ciąg wejściowy:</p>
+        <textarea [value]="inputSequenceAsString"></textarea>
+      </div>
 
     </mat-card>
   </div>
