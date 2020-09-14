@@ -31,6 +31,7 @@ export class SettingsViewComponent implements OnInit {
   selectedGenerationMethod: number;
   inputSequence: Array<Number> = [];
   inputSequenceAsString: string = '';
+  formSubmmited: boolean;
   
 
   ngOnInit(): void {
@@ -38,10 +39,13 @@ export class SettingsViewComponent implements OnInit {
 
   submitForm(): void {
     console.log("clicked!!");
+    this.service.setFormSubmitted(true);
     this.service.setEthernetStandard(this.selectedEthernetStandard);
     // this.service.setUtpStandard(this.selectedUtpStandard);
     this.generateInputSequence();
     console.log(this.inputSequence);
+    this.service.setInputSequence(this.inputSequence);
+    
   }
 
   private randomBit() {

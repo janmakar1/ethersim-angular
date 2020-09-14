@@ -10,6 +10,7 @@
   *ngFor="let link of navLinks"
   [routerLink]="link.link"
   routerLinkActive #rla="routerLinkActive"
+  [disabled]="!service.isFormSubmitted()"
   [active]="rla.isActive">
     {{ link.label }}  
   </a>

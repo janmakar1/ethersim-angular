@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SettingsService } from './settings.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(public service: SettingsService) { }
+
   title = 'ethersim-angular';
 
 //   links = ['Settings', 'Input', 'Output', 'Eyechart'];

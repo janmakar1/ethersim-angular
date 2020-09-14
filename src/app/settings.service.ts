@@ -11,6 +11,8 @@ export class SettingsService {
   
   private _ethernetStandard: string;
   private _utpStandard: string;
+  private _isFormSubmitted: boolean;
+  private _inputSequence: Array<Number>;
 
   constructor() { }
 
@@ -29,6 +31,22 @@ export class SettingsService {
 
   public setUtpStandard(utpStandard: string) {
     this._utpStandard = utpStandard;
+  }
+
+  public isFormSubmitted() {
+    return this._isFormSubmitted;
+  }
+
+  public setFormSubmitted(formSubmitted: boolean) {
+    this._isFormSubmitted = formSubmitted;
+  }
+
+  public getInputSequence() {
+    return this._inputSequence;
+  }
+
+  public setInputSequence(inputSequence: Array<Number>) {
+    this._inputSequence = inputSequence;
   }
 
   // todo: based on the generation method create input string
